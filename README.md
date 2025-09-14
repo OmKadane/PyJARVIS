@@ -1,20 +1,12 @@
 # 🧠 PyJARVIS – Your Personal Voice Assistant  
 
-PyJARVIS is a **Python-based AI Voice Assistant** with a **Tkinter-powered GUI**, capable of performing multiple desktop and internet tasks. It uses **speech recognition + text-to-speech** along with APIs to provide an interactive experience.
-
----
-
-## 📊 Project Status & Badges  
-
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)  
 ![Speech Recognition](https://img.shields.io/badge/Uses-speech__recognition-orange.svg)  
 ![Pyttsx3](https://img.shields.io/badge/Powered%20By-pyttsx3-green.svg)  
 ![Tkinter GUI](https://img.shields.io/badge/GUI-Tkinter-red.svg)  
 ![Weather API](https://img.shields.io/badge/Feature-Weather%20Reports-lightblue.svg)
 
-</div>
-
-A powerful, JARVIS-style desktop voice assistant built with Python and featuring a clean graphical user interface. Automate tasks, get real-time information, and control your desktop using just your voice.
+PyJARVIS is a **Python-based AI Voice Assistant** with a **Tkinter-powered GUI**, capable of performing multiple desktop and internet tasks. It uses **speech recognition + text-to-speech** along with APIs to provide an interactive experience.
 
 ---
 

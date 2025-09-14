@@ -1,4 +1,4 @@
-import pyttsx3
+import pyttsx3 
 import speech_recognition as sr
 import pywhatkit as kit
 import datetime
@@ -10,7 +10,10 @@ import tkinter as tk
 from tkinter import scrolledtext
 import threading
 import time
-import requests
+import requests 
+from dotenv import load_dotenv
+
+load_dotenv()  # LOAD THE .env FILE
 
 # Initialize the voice engine
 engine = pyttsx3.init()
@@ -84,7 +87,11 @@ def recall_memory():
             return file.read()
     return "I don't have anything remembered."
 
-def get_weather(city="", api_key="YOUR_OPEN_WEATHER_API_KEY_HERE"):
+def get_weather(city=""):
+    api_key = os.getenv("OPENWEATHER_API_KEY") # Get key from environment
+    if not api_key:
+        return "Error: OpenWeather API key not found. Please set it in the .env file."
+        
     base_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
     try:
         response = requests.get(base_url)
@@ -216,17 +223,19 @@ def main():
             speak(memories)
 
         elif "weather" in command:
+            city = ""
             if "in" in command:
                 city = command.split("in")[-1].strip()
+            
+            if not city:
+                 speak("Please specify a city for the weather report, for example, 'weather in Mumbai'.")
             else:
-                city = ""
-            weather_report = get_weather(city, api_key="cdd678874858c3e97121d9131f9a6ee9")
-            speak(weather_report)
+                weather_report = get_weather(city) 
+                speak(weather_report)
 
         else:
             speak("Sorry, I didn't understand that command.")
 
-        # ✅ Speak "Listening..." after processing every command
         speak("Listening...")
 
 # GUI Buttons

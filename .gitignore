@@ -1,0 +1,32 @@
+# ----------------------------------------------------------------
+# Python
+# ----------------------------------------------------------------
+
+# My virtual environment folder
+myenv/
+
+# Standard virtual environment folders
+venv/
+env/
+.venv/
+.env
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# IDE / Editor folders (VSCode, PyCharm)
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db

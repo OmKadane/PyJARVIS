@@ -84,7 +84,7 @@ def recall_memory():
             return file.read()
     return "I don't have anything remembered."
 
-def get_weather(city="", api_key="cdd678874858c3e97121d9131f9a6ee9"):
+def get_weather(city="", api_key="YOUR_OPEN_WEATHER_API_KEY_HERE"):
     base_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
     try:
         response = requests.get(base_url)
